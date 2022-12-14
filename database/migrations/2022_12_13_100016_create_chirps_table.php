@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('chirps', function (Blueprint $table) {
-            $table->id();            
+            $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('message');
             $table->timestamps();
